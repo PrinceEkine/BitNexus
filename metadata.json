@@ -1,0 +1,9 @@
+{
+  "name": "BitNexus",
+  "description": "An all-in-one Service Management Platform for professional home care, tech support, and inventory tracking. The digital bridge at the nexus of service and technology.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

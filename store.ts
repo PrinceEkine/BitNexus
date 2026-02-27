@@ -99,11 +99,11 @@ export const useStore = () => {
       if (pricingRes.data) setPricingRules(pricingRes.data);
       if (settingsRes.data) {
         const dbConfig = settingsRes.data.config || {};
-        setSettings({
-          ...settings,
+        setSettings(prev => ({
+          ...prev,
           ...dbConfig,
           paystackPublicKey: dbConfig.paystackPublicKey || process.env.VITE_PAYSTACK_PUBLIC_KEY || import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || ''
-        });
+        }));
       }
       if (profilesRes.data) setUsers(profilesRes.data.map(mapProfile));
       
@@ -114,7 +114,7 @@ export const useStore = () => {
       setLoading(false);
       setInitialLoadComplete(true);
     }
-  }, [settings]);
+  }, []);
 
   useEffect(() => {
     if (!currentUser) return;

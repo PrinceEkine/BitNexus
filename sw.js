@@ -1,4 +1,4 @@
-const CACHE_NAME = 'stockbit-pro-v2';
+const CACHE_NAME = 'bitnexus-v1';
 const ASSETS = [
   '/',
   '/index.html',

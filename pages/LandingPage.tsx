@@ -279,7 +279,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
               <div className="flex -space-x-3 shrink-0">
                 {[1,2,3,4].map(i => (
                   <div key={i} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-slate-100 border-4 border-white flex items-center justify-center overflow-hidden shadow-sm">
-                    <img src={`https://i.pravatar.cc/150?u=stockbit_user_${i}`} alt="User" />
+                    <img src={`https://i.pravatar.cc/150?u=bitnexus_user_${i}`} alt="User" />
                   </div>
                 ))}
               </div>
@@ -295,7 +295,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
             <div className="relative bg-white rounded-[5rem] p-5 border border-slate-100 shadow-2xl overflow-hidden aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=1200" 
-                alt="StockBit Shop Dashboard" 
+                alt="BitNexus Service Dashboard" 
                 className="w-full h-full object-cover rounded-[4rem] opacity-95 transition-transform duration-[2s] group-hover:scale-105"
                 loading="eager"
               />
@@ -466,7 +466,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
               The all-in-one platform designed to bring order to your daily life.
             </p>
             <div className="flex items-center gap-5">
-              <SocialIcon icon={<Twitter size={20}/>} onClick={() => window.open('https://twitter.com/stockbit', '_blank')} />
+              <SocialIcon icon={<Twitter size={20}/>} onClick={() => window.open('https://twitter.com/bitnexus', '_blank')} />
               {!isAppInstalled && <SocialIcon icon={<Smartphone size={20}/>} onClick={onInstall} />}
             </div>
           </div>
@@ -495,7 +495,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
         </div>
         
         <div className="max-w-7xl mx-auto pt-20 mt-20 border-t border-slate-100 text-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.6em] text-slate-400">© 2025 STOCKBIT TECHNOLOGIES NIGERIA. ALL RIGHTS RESERVED.</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.6em] text-slate-400">© 2025 BITNEXUS TECHNOLOGIES NIGERIA. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
 

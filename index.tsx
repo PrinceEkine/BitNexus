@@ -2,18 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-// Register Service Worker with improved resilience for origin mismatches
+// Unregister any existing service workers to clear old caches during rebranding
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    // Using relative path to current origin to avoid domain mismatch errors
-    navigator.serviceWorker.register('./sw.js', { scope: './' })
-      .then(reg => console.log('SW deployed:', reg.scope))
-      .catch(err => {
-        // Silently handle development origin mismatches while logging others
-        if (!err.message.includes('origin')) {
-          console.warn('SW registration failed:', err);
-        }
-      });
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
   });
 }
 

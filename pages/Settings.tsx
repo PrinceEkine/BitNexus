@@ -97,7 +97,7 @@ const Settings: React.FC<SettingsProps> = ({ settings, onUpdate, staff, currentU
 
     const handler = (window as any).PaystackPop.setup({
       key: publicKey,
-      email: currentUser?.email || 'billing@stockbit.pro',
+      email: currentUser?.email || 'billing@bitnexus.run.app',
       amount: amount * 100, 
       currency: "NGN",
       callback: () => onActivateSubscription(plan, cycle),

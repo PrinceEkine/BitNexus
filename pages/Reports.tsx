@@ -108,7 +108,7 @@ const Reports: React.FC<ReportsProps> = ({ state }) => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.setAttribute("href", url);
-    link.setAttribute("download", `stockbit_sales_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute("download", `bitnexus_service_report_${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -96,7 +96,7 @@ const App: React.FC = () => {
   const [isAppInstalled, setIsAppInstalled] = useState(() => {
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches || 
                         (window.navigator as any).standalone === true;
-    const wasMarkedInstalled = localStorage.getItem('stockbit_pwa_installed') === 'true';
+    const wasMarkedInstalled = localStorage.getItem('bitnexus_pwa_installed') === 'true';
     return isStandalone || wasMarkedInstalled;
   });
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
@@ -112,7 +112,7 @@ const App: React.FC = () => {
       
       if (isStandalone) {
         setIsAppInstalled(true);
-        localStorage.setItem('stockbit_pwa_installed', 'true');
+        localStorage.setItem('bitnexus_pwa_installed', 'true');
       }
     };
     
@@ -122,14 +122,14 @@ const App: React.FC = () => {
     const onChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         setIsAppInstalled(true);
-        localStorage.setItem('stockbit_pwa_installed', 'true');
+        localStorage.setItem('bitnexus_pwa_installed', 'true');
       }
     };
     matcher.addEventListener('change', onChange);
 
     window.addEventListener('appinstalled', () => {
       setIsAppInstalled(true);
-      localStorage.setItem('stockbit_pwa_installed', 'true');
+      localStorage.setItem('bitnexus_pwa_installed', 'true');
       setDeferredPrompt(null);
     });
     
